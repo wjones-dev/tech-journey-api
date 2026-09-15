@@ -24,39 +24,23 @@ public class DataLoader {
                 1983,
                 TimelineCategory.GAMING,
                 "Atari 2600",
-                "My early exposure to technology came through video games.",
+                "My early exposure to technology came through video games and sparked a curiosity that would continue throughout my technology journey.",
                 "Atari 2600"
-        ));
-
-        repository.save(new TimelineEvent(
-                1984,
-                TimelineCategory.MUSIC,
-                "Sony Walkman",
-                "Music became personal and portable, changing how I experienced technology.",
-                "Sony Walkman"
         ));
 
         repository.save(new TimelineEvent(
                 1985,
                 TimelineCategory.COMPUTING,
                 "Home Computers",
-                "My early exposure to computers showed me that technology could do much more than play games.",
+                "Home computers showed me that technology could do much more than play games and opened a new world of possibilities.",
                 "Home Computers"
-        ));
-
-        repository.save(new TimelineEvent(
-                1990,
-                TimelineCategory.COMPUTING,
-                "Windows / Personal Computing",
-                "Computers became more approachable and started becoming part of everyday life.",
-                "Windows"
         ));
 
         repository.save(new TimelineEvent(
                 1993,
                 TimelineCategory.WEB,
                 "The Early Internet",
-                "The internet introduced me to a world where computers were no longer standalone devices.",
+                "The early internet introduced me to a world where computers were no longer standalone devices and information could travel across networks.",
                 "Internet"
         ));
 
@@ -64,7 +48,7 @@ public class DataLoader {
                 1995,
                 TimelineCategory.DEVELOPMENT,
                 "Java",
-                "Java became an important foundation of my professional development career.",
+                "Java became an important foundation of my professional development career and eventually a core technology for building enterprise applications.",
                 "Java"
         ));
 
@@ -72,95 +56,71 @@ public class DataLoader {
                 1996,
                 TimelineCategory.WEB,
                 "HTML / Web Development",
-                "Web development created a new way to build and interact with software.",
-                "HTML"
+                "Web development created a new way to build interactive experiences and introduced me to the technologies behind the growing World Wide Web.",
+                "HTML / CSS / JavaScript"
         ));
 
         repository.save(new TimelineEvent(
                 1999,
                 TimelineCategory.MUSIC,
                 "Napster / File Sharing",
-                "Software and networking began changing how an entire industry distributed music.",
-                "Napster"
+                "Napster demonstrated how software, networking, and peer-to-peer technology could disrupt an entire industry and change how digital content was shared.",
+                "Napster / P2P"
         ));
 
         repository.save(new TimelineEvent(
-                2001,
-                TimelineCategory.MUSIC,
-                "Apple iPod",
-                "Portable digital experiences became a major part of everyday technology.",
-                "iPod"
-        ));
-
-        repository.save(new TimelineEvent(
-                2004,
-                TimelineCategory.CONNECTIVITY,
-                "Bluetooth",
-                "Wireless communication between devices became increasingly common.",
-                "Bluetooth"
-        ));
-
-        repository.save(new TimelineEvent(
-                2007,
+                2002,
                 TimelineCategory.MOBILE,
-                "iPhone",
-                "Smartphones transformed expectations around computing, applications, and connectivity.",
-                "iPhone"
+                "Mobile Phones / Flip Phones",
+                "Mobile phones changed how I communicated and made technology something that could travel everywhere with me.",
+                "Mobile Phones"
         ));
 
         repository.save(new TimelineEvent(
                 2008,
                 TimelineCategory.DEVELOPMENT,
-                "Enterprise Java",
-                "I moved deeper into real-world enterprise Java applications and development.",
-                "Enterprise Java"
-        ));
-
-        repository.save(new TimelineEvent(
-                2010,
-                TimelineCategory.DEVELOPMENT,
-                "Spring Framework",
-                "Spring became an important toolkit for building enterprise Java applications and architectures.",
-                "Spring Framework"
+                "Databases & Persistence",
+                "Relational databases, SQL, JDBC, and Hibernate became essential tools for persisting, retrieving, and managing data in enterprise Java applications.",
+                "Oracle / SQL / JDBC / Hibernate"
         ));
 
         repository.save(new TimelineEvent(
                 2014,
                 TimelineCategory.DEVELOPMENT,
                 "Spring Boot",
-                "Spring Boot simplified application configuration and helped modernize the way I built Java services.",
-                "Spring Boot"
+                "Spring Boot simplified Java application configuration while Maven provided the build and dependency management foundation for modern Java development.",
+                "Spring Boot / Maven"
         ));
 
         repository.save(new TimelineEvent(
                 2015,
                 TimelineCategory.DEVELOPMENT,
                 "REST APIs",
-                "REST APIs became a core part of building service-oriented applications and connecting systems.",
-                "REST"
+                "REST APIs became a core part of my development work, allowing applications and services to communicate through clean and reusable interfaces.",
+                "REST / JSON / HTTP"
         ));
 
         repository.save(new TimelineEvent(
                 2016,
                 TimelineCategory.DEVELOPMENT,
-                "Angular",
-                "Angular expanded my development experience into modern full-stack web applications.",
-                "Angular"
+                "Single-Page Applications (SPA)",
+                "Modern frontend frameworks expanded my work into full-stack development, creating dynamic applications that communicate with backend REST services.",
+                "Angular / TypeScript / React / Vue"
         ));
 
         repository.save(new TimelineEvent(
                 2018,
                 TimelineCategory.CLOUD,
                 "AWS / Cloud Computing",
-                "My development work expanded into cloud-based and cloud-native applications.",
+                "Cloud computing expanded my development experience beyond traditional infrastructure into scalable, distributed, and cloud-native applications.",
                 "AWS"
         ));
 
         repository.save(new TimelineEvent(
                 2020,
                 TimelineCategory.CLOUD,
-                "Docker / Kubernetes / OpenShift",
-                "Containers and orchestration became an important part of deploying and operating applications.",
+                "Containers & Orchestration",
+                "Docker changed how applications were packaged and deployed, while Kubernetes and OpenShift provided platforms for orchestrating and scaling containers.",
                 "Docker / Kubernetes / OpenShift"
         ));
 
@@ -168,16 +128,24 @@ public class DataLoader {
                 2022,
                 TimelineCategory.DEVOPS,
                 "CI/CD & Cloud-Native Development",
-                "Jenkins, pipelines, security scanning, deployment automation, and observability became key parts of modern development.",
-                "Jenkins / CI/CD"
+                "Automated builds, testing, security scanning, deployment pipelines, and observability became essential parts of delivering reliable software.",
+                "Jenkins / Maven / CI/CD / DevOps"
         ));
 
         repository.save(new TimelineEvent(
                 2023,
                 TimelineCategory.AI,
                 "Generative AI",
-                "Generative AI represents the latest evolution in my technology journey, from early computers and gaming to AI-assisted development.",
+                "Generative AI introduced a new way to learn, create, write code, solve problems, and accelerate software development.",
                 "Generative AI"
+        ));
+
+        repository.save(new TimelineEvent(
+                2026,
+                TimelineCategory.AI,
+                "Agentic AI / AI Engineering",
+                "AI evolved from generating content into agents capable of planning tasks, using tools, working across codebases, running tests, and collaborating throughout the development lifecycle.",
+                "AI Agents / MCP / Tool Use / Coding Agents"
         ));
     }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,12 +18,21 @@ public class TimelineEventController {
 
     private final TimelineEventService timelineEventService;
 
-    public TimelineEventController(TimelineEventService timelineEventService) {
+    public TimelineEventController(
+            TimelineEventService timelineEventService
+    ) {
         this.timelineEventService = timelineEventService;
     }
 
     @GetMapping
     public List<TimelineEventDto> getAllEvents() {
         return timelineEventService.getAllEvents();
+    }
+
+    @GetMapping("/{id}")
+    public TimelineEventDto getEventById(
+            @PathVariable Long id
+    ) {
+        return timelineEventService.getEventById(id);
     }
 }
