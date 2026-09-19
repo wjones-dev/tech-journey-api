@@ -16,23 +16,21 @@ import com.techjourney.api.service.TimelineEventService;
 @RequestMapping("/api/timeline")
 public class TimelineEventController {
 
-    private final TimelineEventService timelineEventService;
+	private final TimelineEventService timelineEventService;
 
-    public TimelineEventController(
-            TimelineEventService timelineEventService
-    ) {
-        this.timelineEventService = timelineEventService;
-    }
+	public TimelineEventController(TimelineEventService timelineEventService) {
+		this.timelineEventService = timelineEventService;
+	}
 
-    @GetMapping
-    public List<TimelineEventDto> getAllEvents() {
-        return timelineEventService.getAllEvents();
-    }
+	@GetMapping
+	public List<TimelineEventDto> getAllEvents() {
+		return timelineEventService.getAllEvents();
+	}
 
-    @GetMapping("/{id}")
-    public TimelineEventDto getEventById(
-            @PathVariable Long id
-    ) {
-        return timelineEventService.getEventById(id);
-    }
+	@GetMapping("/{id}")
+	public TimelineEventDto getEventById(@PathVariable Long id) {
+		return timelineEventService.getEventById(id);
+	}
+
+	
 }

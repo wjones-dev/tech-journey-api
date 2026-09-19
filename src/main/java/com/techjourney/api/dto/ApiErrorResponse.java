@@ -1,9 +1,4 @@
 package com.techjourney.api.dto;
 
-public record ApiErrorResponse(
-        int status,
-        String error,
-        String message,
-        String path
-) {
+public record ApiErrorResponse(int status, String error, String message, String path) {
 }

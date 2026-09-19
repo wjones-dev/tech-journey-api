@@ -21,34 +21,18 @@ public class TimelineEventServiceImpl implements TimelineEventService {
 	@Override
 	public List<TimelineEventDto> getAllEvents() {
 
-	    return timelineEventRepository.findAll()
-	            .stream()
-	            .map(event -> new TimelineEventDto(
-	                    event.getId(),
-	                    event.getYear(),
-	                    event.getCategory(),
-	                    event.getTitle(),
-	                    event.getDescription(),
-	                    event.getTechnology()
-	            ))
-	            .toList();
+		return timelineEventRepository.findAll().stream().map(event -> new TimelineEventDto(event.getId(),
+				event.getYear(), event.getCategory(), event.getTitle(), event.getDescription(), event.getTechnology()))
+				.toList();
 	}
-	
-	
+
 	@Override
 	public TimelineEventDto getEventById(Long id) {
 
-	    return timelineEventRepository.findById(id)
-	            .map(event -> new TimelineEventDto(
-	                    event.getId(),
-	                    event.getYear(),
-	                    event.getCategory(),
-	                    event.getTitle(),
-	                    event.getDescription(),
-	                    event.getTechnology()
-	            ))
-	            .orElseThrow(() ->
-	                    new TimelineEventNotFoundException(id)
-	            );
+		return timelineEventRepository.findById(id)
+				.map(event -> new TimelineEventDto(event.getId(), event.getYear(), event.getCategory(),
+						event.getTitle(), event.getDescription(), event.getTechnology()))
+				.orElseThrow(() -> new TimelineEventNotFoundException(id));
 	}
+
 }

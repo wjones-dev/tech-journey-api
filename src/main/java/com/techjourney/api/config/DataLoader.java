@@ -19,6 +19,10 @@ public class DataLoader {
 
     @EventListener(ApplicationReadyEvent.class)
     public void loadData() {
+    	
+    	 if (repository.count() > 0) {
+    	        return;
+    	    }
 
         repository.save(new TimelineEvent(
                 1983,

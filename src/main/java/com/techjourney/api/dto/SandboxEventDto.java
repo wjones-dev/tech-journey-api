@@ -1,5 +1,7 @@
 package com.techjourney.api.dto;
 
+import java.time.LocalDateTime;
+
 import com.techjourney.api.entity.TimelineCategory;
 
 import lombok.Getter;
@@ -9,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TimelineEventDto {
+public class SandboxEventDto {
 
 	private Long id;
 	private Integer year;
@@ -17,6 +19,7 @@ public class TimelineEventDto {
 	private String title;
 	private String description;
 	private String technology;
+	private LocalDateTime createdAt;
 
 	public Long getId() {
 		return id;
@@ -66,8 +69,16 @@ public class TimelineEventDto {
 		this.technology = technology;
 	}
 
-	public TimelineEventDto(Long id, Integer year, TimelineCategory category, String title, String description,
-			String technology) {
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public SandboxEventDto(Long id, Integer year, TimelineCategory category, String title, String description,
+			String technology, LocalDateTime createdAt) {
 
 		this.id = id;
 		this.year = year;
@@ -75,5 +86,6 @@ public class TimelineEventDto {
 		this.title = title;
 		this.description = description;
 		this.technology = technology;
+		this.createdAt = createdAt;
 	}
 }
