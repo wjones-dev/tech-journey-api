@@ -47,4 +47,35 @@ public class GlobalExceptionHandler {
                 .status(HttpStatus.NOT_FOUND)
                 .body(response);
     }
+    
+    
+    /*
+     * Handles invalid configuration submitted to an Engineering Lab experiment.
+     *
+     * Examples include:
+     *
+     * - an unknown timeline category
+     * - a zero or negative result limit
+     * - other invalid experiment input
+     *
+     * These are client request errors, so they are returned as
+     * HTTP 400 BAD REQUEST rather than HTTP 500 INTERNAL SERVER ERROR.
+     */
+    @ExceptionHandler(EngineeringLabInvalidRequestException.class)
+    public ResponseEntity<ApiErrorResponse> handleEngineeringLabInvalidRequest(
+            EngineeringLabInvalidRequestException exception,
+            HttpServletRequest request) {
+
+        ApiErrorResponse response =
+                new ApiErrorResponse(
+                        HttpStatus.BAD_REQUEST.value(),
+                        HttpStatus.BAD_REQUEST.getReasonPhrase(),
+                        exception.getMessage(),
+                        request.getRequestURI()
+                );
+
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(response);
+    }
 }
